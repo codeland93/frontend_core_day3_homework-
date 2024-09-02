@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea, select, button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Contact Me</h1>
+<form action="https://example.com/form-handler" method="post" aria-label="Contact Form">
+    <!-- Email Input -->
+    <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required aria-required="true" aria-describedby="emailHelp">
+        <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
+    </div>
+
+    <!-- Date Input -->
+    <div class="form-group">
+        <label for="contact-date">Preferred Contact Date:</label>
+        <input type="date" id="contact-date" name="contact-date" placeholder="Select a date" min="2024-01-01" max="2025-12-31">
+    </div>
+
+    <!-- Radio Buttons -->
+    <div class="form-group">
+        <p>Preferred Contact Method:</p>
+        <input type="radio" id="contact-email" name="contact-method" value="email" checked>
+        <label for="contact-email">Email</label>
+        <input type="radio" id="contact-phone" name="contact-method" value="phone">
+        <label for="contact-phone">Phone</label>
+    </div>
+
+    <!-- Checkboxes -->
+    <div class="form-group">
+        <p>Contact Preferences:</p>
+        <input type="checkbox" id="newsletter" name="preferences" value="newsletter">
+        <label for="newsletter">Subscribe to newsletter</label>
+        <input type="checkbox" id="updates" name="preferences" value="updates">
+        <label for="updates">Receive updates</label>
+    </div>
+
+    <!-- Textarea Input -->
+    <div class="form-group">
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Enter your comments here..."></textarea>
+    </div>
+
+    <!-- Select Menu -->
+    <div class="form-group">
+        <label for="inquiry-type">Type of Inquiry:</label>
+        <select id="inquiry-type" name="inquiry-type">
+            <option value="general">General Inquiry</option>
+            <option value="feedback">Feedback</option>
+            <option value="support">Support Request</option>
+        </select>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="form-group">
+        <p>Connect with me:</p>
+        <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a> |
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="submit-btn">Submit</button>
+</form>
+
+</body>
+</html>
